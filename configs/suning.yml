@@ -1,0 +1,24 @@
+app:
+  name: suning_spider
+  port: 6666
+log:
+  filename: /tmp/suning_spider.log
+  maxSize: 20
+  maxBackups: 3
+  maxAge: 3
+  level: "debug"
+  stdout: true
+db:
+  url: root:123456@tcp(db:3306)/device?charset=utf8&parseTime=True&loc=Local
+  debug: false
+consul:
+  addr: localhost:8500
+grpc:
+  port: 0
+jaeger:
+  serviceName: frcs
+  reporter:
+    localAgentHostPort: "106.12.52.246:6831"
+  sampler:
+    type: const
+    param: 1

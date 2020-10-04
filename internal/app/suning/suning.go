@@ -27,7 +27,6 @@ func NewOptions(v *viper.Viper, logger *zap.Logger) (*Options, error) {
 
 func NewApp(opt *Options, logger *zap.Logger, launcher app.Launcher) (*app.Application, error) {
 	a, err := app.New(opt.Name, logger, app.LauncherOption(launcher))
-
 	if err != nil {
 		return nil, errors.Wrap(err, "create new app error")
 	}
