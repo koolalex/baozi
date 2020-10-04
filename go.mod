@@ -7,7 +7,7 @@ require (
 	github.com/antchfx/xmlquery v1.3.2 // indirect
 	github.com/chromedp/cdproto v0.0.0-20200116234248-4da64dd111ac
 	github.com/chromedp/chromedp v0.5.3
-	github.com/go-redis/redis/v8 v8.2.3 // indirect
+	github.com/go-redis/redis/v8 v8.2.3
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/gocolly/colly v1.2.0
 	github.com/google/wire v0.4.0
