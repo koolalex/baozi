@@ -1,0 +1,14 @@
+---
+workspace:
+  base: /home/drone/go
+  path: src/baozi
+
+clone:
+  git:
+    image: https://github.com/koolalex/baozi.git
+
+pipeline:
+  build:
+    image: golang:1.13
+    commands:
+      - go build
