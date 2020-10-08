@@ -3,8 +3,13 @@ clone:
   git:
     image: https://github.com/koolalex/baozi.git
 
-pipeline:
-  build:
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build
     image: golang:1.13.14
     commands:
+      - cd cmd/spider
       - go build
