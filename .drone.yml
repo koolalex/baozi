@@ -1,18 +1,16 @@
-workspace:
-  base: /home/drone/go
-  path: src/baozi
+kind: pipeline
+type: docker
+name: default
 
 clone:
   git:
     image: https://github.com/koolalex/baozi.git
 
-kind: pipeline
-type: docker
-name: default
-
 steps:
   - name: build
     image: golang:1.13.14
     commands:
+      - go env -w GOPROXY=https://goproxy.cn,direct
+      - go mod tidy
       - cd cmd/spider
       - go build
