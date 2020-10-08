@@ -1,4 +1,7 @@
----
+workspace:
+  base: /home/drone/go
+  path: src/baozi
+
 clone:
   git:
     image: https://github.com/koolalex/baozi.git
