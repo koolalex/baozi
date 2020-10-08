@@ -7,8 +7,11 @@ clone:
   git:
     image: https://github.com/koolalex/baozi.git
 
+name:
+kind: secret
+get:
 pipeline:
   build:
-    image: golang:1.13
+    image: golang:1.13.14
     commands:
       - go build
