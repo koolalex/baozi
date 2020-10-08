@@ -14,3 +14,10 @@ steps:
       - go mod tidy
       - cd cmd/spider
       - go build
+
+  - name: publish
+    image: plugins/docker
+    repo: koolalex/baozi
+    registry:
+      from_secret: secret_registry_addr
+    dockerfile: ./build/spider/Dockerfile
