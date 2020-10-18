@@ -14,6 +14,7 @@ steps:
       - go mod tidy
       - cd cmd/spider
       - go build
+      - echo secret_registry_addr/koolalex/baozi
 
   - name: publish
     image: plugins/docker
