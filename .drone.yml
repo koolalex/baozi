@@ -26,5 +26,4 @@ steps:
     registry:
       from_secret: secret_registry_addr
     context: /build/spider
-    dockerfile: /build/spider/Dockerfile
 
