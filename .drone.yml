@@ -25,5 +25,8 @@ steps:
       from_secret: secret_repo
     registry:
       from_secret: secret_registry_addr
-    context: /build/spider
+    context: /build/spider/
+    commands:
+      - ls -la
+      - ls -la Dockerfile
 
