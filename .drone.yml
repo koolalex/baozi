@@ -31,11 +31,6 @@ steps:
       - ls -la
 
   - name: notify
-    image: lddsb/drone-dingtalk-message
-    settings:
-      token:
-        from_secret: secret_dingtalk
-      type: markdown
-      message_color: true
-      message_pic: true
-      sha_link: true
+    image: somax/drone-ding
+    webhook:
+      from_secret: secret_dingding
