@@ -9,16 +9,20 @@ clone:
 steps:
   - name: build
     image: golang:1.13.14
+    environment:
+      REPO:
+        from_secret: secret_repo
     commands:
       - go env -w GOPROXY=https://goproxy.cn,direct
       - go mod tidy
       - cd cmd/spider
       - go build
-      - echo secret_registry_addr/koolalex/baozi
+      - echo $REPO
 
   - name: publish
     image: plugins/docker
-    repo: secret_registry_addr/koolalex/baozi
+    repo:
+      from_secret: secret_repo
     registry:
       from_secret: secret_registry_addr
     context: ./build/spider
