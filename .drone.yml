@@ -27,6 +27,8 @@ steps:
       from_secret: secret_registry_addr
     dockerfile: ./build/spider/Dockerfile
     context: ./build/spider/
+    commands:
+      - ls -la
 
   - name: notify
     image: lddsb/drone-dingtalk-message
